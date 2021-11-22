@@ -43,6 +43,11 @@ run this commands one by one
 npm run build-dev
 npm run start
 ```
+## Run app tests
+run this command to test app
+```
+npm run test
+```
 
 and open `localhost:8081`
 

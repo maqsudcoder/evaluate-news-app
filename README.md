@@ -9,7 +9,13 @@
 
 ## About
 
-The motive of this project is to have you a taste of the environment and tools you will most likely come across in a front end role. Your focus should be to understand the role every tool and technology is playing in the overall architecture. You shouldn’t feel the need to memorize the particular commands, config setups, or structure that we create here. Every project in the industry will have its own custom setup, but if you understand the moving pieces, you will be able to get the gist of even far more complicated projects than this one.
+This app use Sentiment Analysis to analyse given webpage
+
+Sentiment Analysis is MeaningCloud's solution for performing a detailed multilingual sentiment analysis of texts from different sources.
+
+The text provided is analyzed to determine if it expresses a positive/negative/neutral sentiment; to do this, the local polarity of the different sentences in the text is identified and the relationship between them evaluated, resulting in a global polarity value for the whole text.
+
+Besides polarity at sentence and global level, Sentiment Analysis uses advanced natural language processing techniques to also detect the polarity associated to both entities and concepts in the text. It provides a reference in the relevant sentence and a list of elements detected with the aggregated polarity derived from all their appearances, also taking into account the grammatical structures in which they are contained.
 
 ## Languages & tools
 
@@ -17,8 +23,28 @@ The motive of this project is to have you a taste of the environment and tools y
 -   CSS
 -   JAVASCRIPT
 -   Node.js
+### dependencies | thare are a lot 😁  
+-   body-parser
+-   cors
+-   cross-fetch
+-   css-loader
+-   dotenv
+-   express
+-   sass
+-   sass-loader
+-   style-loader
+-   valid-url
 -   webpack
--   babel
+-   webpack-cli
+
+## How to run 
+run this commands one by one
+```
+npm run build-dev
+npm run start
+```
+
+and open `localhost:8081`
 
 ## Author
 

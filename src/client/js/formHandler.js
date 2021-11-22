@@ -11,12 +11,33 @@ function handleSubmit(event) {
     return;
   }
 
-  console.log('::: Form Submitted :::');
-
-  Client.postData('http://localhost:8081/data', { url: inputValue }).then((res) => {
-    console.log(res);
-    Client.updateUI(res);
-  });
+  fetch('http://localhost:8081/data', {
+    method: 'POST',
+    credentials: 'same-origin',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      url: inputValue,
+    }),
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      console.log('Success:', data);
+      updateUI(data);
+    });
 }
+
+const updateUI = (data) => {
+  try {
+    document.getElementById('agreement').innerHTML = data.agreement;
+    document.getElementById('confidence').innerHTML = data.confidence;
+    document.getElementById('irony').innerHTML = data.irony;
+    document.getElementById('score').innerHTML = data.score_tag;
+    document.getElementById('subjectivity').innerHTML = data.subjectivity;
+  } catch (error) {
+    console.log('error', error);
+  }
+};
 
 export { handleSubmit };

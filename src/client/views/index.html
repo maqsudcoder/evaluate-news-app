@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Test</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="">Logo</div>
+      <div class="">navigation</div>
+    </header>
+
+    <main>
+      <section>
+        <form class="form" onsubmit="return Client.handleSubmit(event)">
+          <input id="url" type="text" name="input" placeholder="Name" />
+          <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)" />
+        </form>
+      </section>
+
+      <section>
+        <strong>Form Results:</strong>
+        <ul>
+          <li>
+            Agreement:
+            <div id="agreement"></div>
+          </li>
+          <li>
+            Confidence:
+            <div id="confidence"></div>
+          </li>
+          <li>
+            Irony:
+            <div id="irony"></div>
+          </li>
+          <li>
+            Score:
+            <div id="score"></div>
+          </li>
+          <li>
+            Subjectivity:
+            <div id="subjectivity"></div>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <div id="results"></div>
+    <footer>
+      <p>This is a footer</p>
+    </footer>
+  </body>
+</html>

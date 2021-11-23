@@ -40,7 +40,7 @@ Besides polarity at sentence and global level, Sentiment Analysis uses advanced 
 ## How to run 
 run this commands one by one
 ```
-npm run build-dev
+npm run build-prod
 npm run start
 ```
 ## Run app tests
